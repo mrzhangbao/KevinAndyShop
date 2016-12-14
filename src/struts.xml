@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+     <!-- Configuration for the default package. -->
+     <constant name="struts.devMode" value="false"></constant>
+    <package name="default" namespace="/" extends="struts-default">
+    
+    <default-action-ref name="NoAction"/>
+  
+    
+        
+        <!--  <action name="*Action" class="studentAction.StuinfoAction" method="{1}">
+        	<result name="input">/{1}UI.jsp</result>
+        	<result name="findByIdUI">/lookStudentMessage.jsp</result>
+            <result name="UI">/{1}.jsp</result>
+            <result name="saveUI">/updateStudentInfo.jsp</result>
+            <result name="deleteUI">/deleteStudent.jsp</result>
+            <result name="success">/success.jsp</result>
+            <result name="showAll">/showInformation.jsp</result>
+        </action>
+        
+        -->
+        
+        <action name="*Action" class="com.kevin.useraction.UserAction" method="{1}">
+        	<result name="success">/userinfo/userlogin.jsp</result>
+        	<result name="index">/head.jsp</result>
+        	<result name="error">/userinfo/error.jsp</result>
+        	<result name="showUserInfo">/Admin/showUserInfo.jsp</result>
+        </action>
+         <action name="userLoginChcek" class="com.kevin.useraction.UserLoginCheck">
+        	<result name="yes">/MyJsp.jsp</result>
+        	<result name="no">/userinfo/login.jsp</result>
+        </action>
+      
+        
+        <action name="phoneChcek" class="com.kevin.useraction.FormCheckAction"></action>
+        <action name="passwordChcek" class="com.kevin.useraction.UserInfoCheck"></action>
+        
+        <action name="*Admin" class="com.kevin.adminaction.AdminAction" method="{1}">
+        	<result name="success">/Admin/AdminAdd.jsp</result>
+        	<result name="showAdminInfo">/Admin/AdminUpdate.jsp</result>
+        	<result name="show">/Admin/AdminEdit.jsp</result>
+        	<result name="showInfo">/Admin/AdminInfo.jsp</result>
+        	<result name="loginfail">/Admin/AdminLogin.jsp</result>
+        	<result name="loginsuccess">/Admin/AdminIndex.jsp</result>
+        
+        </action>
+        
+        <action name="*Category" class="com.kevin.categoryaction.CategoryAction" method="{1}">
+        	<result name="success">/Admin/CategoryAdd.jsp</result>
+        	<result name="showinfo">/Admin/CategoryDelete.jsp</result>
+        	<result name="delete">/Admin/CategoryDelete.jsp</result>
+        	<result name="productadd">/Admin/ProductAdd.jsp</result>
+        	
+        
+        </action>
+        
+        <action name="fileupload" class="com.kevin.productaction.FileUploadAction">
+        	<result name="success">/Admin/OperateSuccess.jsp</result>
+        </action>
+        <!-- 显示图片的action -->
+        <action name="showImages" class="com.kevin.productaction.ProductShowAction" method="showImages"></action>
+        
+        
+        <!-- 获取商品信息的action -->
+        
+        <action name="getinfo" class="com.kevin.productaction.GetProductAction" method="getinfo">
+        	<result name="show">/Admin/ProductShow.jsp</result>
+        </action>
+        <action name="index" class="com.kevin.productaction.GetProductAction" method="index">
+        	<result name="indexshow">/index.jsp</result>
+        </action>
+        <action name="*HOME" class="com.kevin.productaction.GetProductAction" method="{1}">
+        	<result name="show">/index.jsp</result>
+        </action>
+       
+        
+        
+        
+       
+         
+   
+        
+        <action name="NoAction" class="com.kevin.useraction.UserAction" method="NoAction"> 
+        	<result name="error">/userinfo/error.jsp</result>
+        </action>
+    </package>
+</struts>

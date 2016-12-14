@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.kevin.orm.ProductInfo" table="productinfo" catalog="db_kevinshop">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" length="50" />
+            <generator class="increment" />
+        </id>
+        <property name="productname" type="java.lang.String">
+            <column name="productname" length="50"  />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description" length="250"  />
+        </property>
+        
+        <property name="baseprice" type="java.lang.String">
+            <column name="baseprice"  length="50"  />
+        </property>
+        <property name="marketprice" type="java.lang.String">
+            <column name="marketprice"  length="50"  />
+        </property>
+        <property name="sellprice" type="java.lang.String">
+            <column name="sellprice"  length="50"  />
+        </property>
+        <property name="uploadfile" type="java.lang.String">
+            <column name="uploadfile"  length="150"  />
+        </property>
+        <property name="categoryid" type="java.lang.String">
+            <column name="categoryid"  length="50"  />
+        </property>
+    </class>
+</hibernate-mapping>

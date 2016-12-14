@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: bold 11px/1.5em Verdana;
+	background-color: #fffff;
+}
+
+img {
+	border: none;
+}
+
+#tabs7 {
+	float: left;
+	margin-left:220px;
+	width: 100%;
+	background: #ffffff;
+	font-size: 20px;
+	line-height: 30px;
+	font-family:Microsoft YaHei,Verdana,Arial,SimSun;color:#000000;
+	/*
+	border-bottom: 1px solid #333B66;
+	*/
+}
+
+#regist{  float:clear;float:right;font-size: 100%;line-height: 35px;padding-left:5px;padding-top:15px;font-weight:bold;}
+#myshop{hover:red;}
+
+#tabs7 ul {
+	margin: 0;
+	padding: 10px 10px 0 50px;
+	list-style: none;
+}
+
+#tabs7 li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+
+#tabs7 a {
+	float: left;
+	background: url("images/tableft7.gif") no-repeat left top;
+	margin: 0;
+	padding: 0 0 0 4px;
+	text-decoration: none;
+}
+
+#tabs7 a span {
+	float: left;
+	display: block;
+	background: url("images/tabright7.gif") no-repeat right top;
+	padding: 5px 10px 6px 6px;
+	color: #000000;
+}
+
+#tabs7 a span {
+	float: none;
+}
+/* End IE5-Mac hack */
+#tabs7 a:hover span {
+	color:#FF0000;
+}
+
+#tabs7 a:hover {
+	background-position: 0% -42px;
+}
+
+#tabs7 a:hover span {
+	background-position: 100% -42px;
+}
+
+
+ .login{
+    float:clear;
+	float:right;
+	background-color: #ffffff;
+}
+#login_icon{
+	float:left;
+	margin-top:35px;
+	padding:0px 0px 0px 0px;
+
+	
+}
+
